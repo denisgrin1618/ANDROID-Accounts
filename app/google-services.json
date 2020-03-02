@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1066959573781",
+    "firebase_url": "https://sunstonesaccounts2.firebaseio.com",
+    "project_id": "sunstonesaccounts2",
+    "storage_bucket": "sunstonesaccounts2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066959573781:android:bf0de48ff37b53fa490f1c",
+        "android_client_info": {
+          "package_name": "ua.sunstones.sunstones_accounts_2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1066959573781-fjfpr8uc2592nh0hpk16tvmhn3ifk4ab.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ua.sunstones.sunstones_accounts_2",
+            "certificate_hash": "28a8cd1fb066f09ef5ac9cea43a2592dd75e7654"
+          }
+        },
+        {
+          "client_id": "1066959573781-l6veq55jo3j3d80tr0pavnhjecsura8e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUU2tVceFFrdulMMPTX8f0sc4BqzT2_kQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1066959573781-l6veq55jo3j3d80tr0pavnhjecsura8e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

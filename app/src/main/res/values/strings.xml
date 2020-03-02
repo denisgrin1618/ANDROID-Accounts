@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SUNSTONES_Accounts_2</string>
+    <string name="hint_login">login</string>
+    <string name="hint_password">password</string>
+    <string name="full_assembly">full assembly</string>
+    <string name="not_full_assembly">set aside</string>
+    <string name="out_of_stock">out of stock</string>
+</resources>

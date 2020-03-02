@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".OneAccountActivity">
+
+
+    <ua.sunstones.sunstones_accounts_2.GifImageView
+        android:id="@+id/gifImage_downloding"
+        scaleType="centerCrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:elevation="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/current_account"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android:ems="10"
+        android:hint="СЧЕТ"
+        android:inputType="textPersonName"
+        android:paddingLeft="5dp"
+        android:textSize="25dp"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+     <TableLayout
+                android:id="@+id/table_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+         android:layout_marginEnd="20dp"
+         android:layout_marginTop="20dp"
+
+                android:background="#000000"
+                android:stretchColumns="*"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/current_account"
+         app:layout_constraintBottom_toTopOf="@+id/scroll_view_history">
+
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:id="@+id/textView213"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Приход:"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="25dp"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:id="@+id/text_view_account_plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="2"
+                        android:padding="2dp"
+
+                        android:text="ХХХХХ ₴"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="25dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:id="@+id/textView313"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Расход:"
+
+                        android:textColor="@color/colorAccent"
+                        android:textSize="25dp"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:id="@+id/text_view_account_minus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="2"
+                        android:padding="2dp"
+
+                        android:text="ХХХХХ ₴"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="25dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:id="@+id/textView333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Баланс:"
+                        android:textSize="25dp"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:id="@+id/text_view_account_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="2"
+                        android:padding="2dp"
+                        android:text="ХХХХХ ₴"
+                        android:textSize="25dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:id="@+id/textView3323"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="3"
+                        android:paddingTop="20dp"
+                        android:text="Обороты за текущий месяц"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="25dp"
+                        android:textStyle="bold|italic" />
+
+
+                </TableRow>
+
+            </TableLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_view_history"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/table_account"
+        app:layout_constraintBottom_toTopOf="@+id/liner_layout_toolbar_2">
+
+            <TableLayout
+            android:id="@+id/table_account_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="#000000"
+            android:stretchColumns="*">
+
+            <!--<TableRow
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="#ffffff"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="09:23:2019"
+                    android:textSize="25dp"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/textView229"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="680₴"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="25dp"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/textView2329"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="80₴"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="25dp"
+                    android:textStyle="bold|italic" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/textView239"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="курс 4.6"
+                    android:textSize="25dp"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/textView23294"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="6¥"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="25dp"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/textView23329"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="8¥"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="25dp"
+                    android:textStyle="bold|italic" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="#ffffff"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/textView2889"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="09:23:2019"
+                    android:textSize="25dp"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/textView22889"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="680₴"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="25dp"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/textView232889"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="80₴"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="25dp"
+                    android:textStyle="bold|italic" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/textView2339"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="курс 4.6"
+                    android:textSize="25dp"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/textView283294"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="6¥."
+                    android:textColor="@color/colorGreen"
+                    android:textSize="25dp"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/textView283329"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="8¥"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="25dp"
+                    android:textStyle="bold|italic" />
+
+
+            </TableRow>-->
+
+        </TableLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/liner_layout_toolbar_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button_update"
+            android:layout_width="@android:dimen/app_icon_size"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_update"
+            android:onClick="onClickButtonUpdate" />
+
+        <Button
+            android:id="@+id/button_ceate_ppi"
+            android:layout_width="@android:dimen/app_icon_size"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_ppi"
+            android:onClick="onClickButtonCreatePPI" />
+
+
+    </LinearLayout>
+
+   <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/table_account">
+
+
+        <Button
+            android:id="@+id/button_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="ОБНОВИТЬ"
+            android:onClick="onClickButtonUpdate"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+    </LinearLayout>-->
+
+
+</android.support.constraint.ConstraintLayout>

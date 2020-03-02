@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_main_authorization"
+        android:title="Авторизация" />
+
+    <item
+        android:id="@+id/menu_main_one_account"
+        android:title="Счета" />
+
+   <item
+        android:id="@+id/menu_main_ppi"
+        android:title="Расходы" />
+
+</menu>
